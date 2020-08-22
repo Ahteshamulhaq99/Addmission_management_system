@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['name'])){
+	header('location:login.php');
+  }else{
 $conn = mysqli_connect("localhost","root","");
 $db=mysqli_select_db($conn,'students');
 $view_rec= $_GET['view'];
@@ -22,6 +26,7 @@ while ($row=mysqli_fetch_array($run))
 
 
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,3 +112,4 @@ label{
 </table>   
 </body>
 </html>
+<?php } ?>

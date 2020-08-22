@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['name'])){
+  header('location:login.php');
+}else{
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +19,15 @@
   <title>record of student</title>
 </head>
 <body>
-<table border=2px class="container-fluid container-sm container-md container-xl container-lg">
-<tr ><th colspan=7><h1>Record Of Students</th></h1></tr>
+
+	 <table border=2px class="container-fluid container-sm container-md container-xl container-lg">
+
+<tr  ><th colspan=7 ><h1 style=" background-color: white;">Record Of Students <a type="button" class="btn btn-danger btn-lg" href='logout.php' style=" float:right">Logout</a></h1></th>
+</tr>
+
+
 <tr>
+
 <th>ID</th>
 <th>Name</th>
 <th>Father Name</th>
@@ -46,7 +60,7 @@ while($row=mysqli_fetch_array($run)){
     <td><a href='view.php?view=<?php echo $id;?>'><img class="icon" src="images/view.png" alt=""></a></td>
 </tr>
 
-<?php } ?>
+<?php }} ?>
 
 </table> 
 </body>

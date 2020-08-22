@@ -20,9 +20,11 @@
 	<div class="page-content">
 	 <div class="form-v9-content" style="background-color: white;" >
 		
-		
+	
 			<form class="form-detail" action="form.php" method="post">
-				<h1 style="color: navy; text-align: center;">Registeration Form</h1>
+			<a type="button" class="btn btn-danger btn-lg" href='login.php' style="float:right">Go To Admin</a>
+	 
+			<h1 style="color: navy; text-align: center;">Registeration Form</h1>
 				<br><br>
 				<div class="form-row-total">
 					<div class="form-row">
